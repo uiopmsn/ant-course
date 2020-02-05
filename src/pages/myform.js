@@ -52,7 +52,7 @@ class MyForm extends React.Component {
                 <Modal title="新建记录"
                        visible={visible}
                        onOk={this.handleOk}
-                       onCancel={ ()=>this.setModal(false) }>
+                       onCancel={()=>this.setModal(false)}>
 
                     <Form>
                         <FormItem label="名称">
@@ -90,10 +90,17 @@ class MyForm extends React.Component {
         const action = {
             type: 'myForm/setVisible',
             payload: visible
-        }
+        };
         dispatch(action);
-    }
+    };
 
+    /*
+    handleCancel = () => {
+        this.setState({
+            visible: false,
+        });
+    }
+     */
 
     //提交表单
     handleOk = () => {
@@ -109,4 +116,5 @@ class MyForm extends React.Component {
     }
 }
 
+//创建一个高阶组件，为页面组件 List 提供表单所需要的内容(this.props.form)。
 export default connect(mapStateToProps)(Form.create()(MyForm));
