@@ -39,7 +39,9 @@ class List extends Component {
 
 function mapStateToProps(state) {
     return {
-        cardsList: state.cards.cardsList,
+        //dva model 的namespace两种写法都可以，测试有效
+        //cardsList: state.cards.cardsList,
+        cardsList: state['cards'].cardsList,
         //其中当用户 dispatch 对应 effect 时，dva 会自动注入对应 effect 的 loading 状态。
         // 因而我们可以很方便的将 state.loading.effects 中的状态传入。
         cardsLoading: state.loading.effects['cards/queryList'],

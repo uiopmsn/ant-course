@@ -36,6 +36,13 @@ export default class BasicLayout extends Component{
                             </Link>
                         </Menu.Item>
 
+                        <Menu.Item key="4">
+                            <Link to="/myform">
+                                <Icon type="pie-chart" />
+                                <span>my form</span>
+                            </Link>
+                        </Menu.Item>
+
                         <SubMenu
                             key="sub1"
                             title={<span><Icon type="dashboard" /><span>Dashboard</span></span>}

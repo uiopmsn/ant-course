@@ -24,6 +24,11 @@ export default {
                     component: './HelloWorld',
                 },
 
+                {
+                    path: 'myform',
+                    component: './myform',
+                },
+
                 {   path: 'list',
                     component: '../pages/list'
                 },
